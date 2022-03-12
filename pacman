@@ -1,0 +1,32 @@
+# install a builded package file (.tar.xz)
+pacman -U <file>
+
+# update and upgrade local packages
+pacman -Syu
+
+# list explicitly installed packages:
+pacman -Qe
+
+# list commands provided by an installed package
+pacman -Ql <package> | sed -n -e 's/.*\/bin\///p' | tail -n +2
+
+# pacman hooks folder
+/etc/pacman.d/hooks/
+
+# purge a package
+pacman -Rns <package>
+
+# remove all orphan packages
+pacman -Rns $(pacman -Qtdq)
+
+# remove all packages from cache
+paccache -rk 2
+
+# clean yay cache
+yay -Scc
+
+# query files database to see who owns certain file(s)
+pacman -Qo <file>
+
+# get information about a package
+pacman -Si <package>

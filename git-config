@@ -1,0 +1,18 @@
+# To set your identity:
+git config --global user.name <name>
+git config --global user.email <email>
+
+# To set your editor:
+git config --global core.editor <editor>
+
+# To enable color:
+git config --global color.ui true
+
+# Defined the key to use for signing commits
+git config user.signingkey [KEYID]
+
+# Set signing of commits globally
+git config --global commit.gpgsign true
+
+# The GPG key used for signing your commits
+git config --global user.signingkey 0A46826A

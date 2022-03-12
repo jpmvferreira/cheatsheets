@@ -1,0 +1,81 @@
+# clone a remote repository
+git clone <remote-url>
+
+# stage all changes for commit
+git add --all
+
+# commit staged changes
+git commit -m <message>
+
+# edit previous commit message
+git commit --amend
+
+# push to a remote named origin
+# requires setting a default remote for the branch
+git push origin
+
+# get entire commit history
+git log
+
+# get current git repository status
+git status
+
+# stash changes with a message (optional)
+git stash push -m <message>
+
+# list all the stashed changes
+git stash list
+
+# apply the most recent change and remove the stash from the stash list
+git stash pop
+
+# apply a specific stash from the list of stashes
+git stash apply <stash>
+
+# drop a stash
+git stash drop <stash>
+
+# remove staged and working directory changes
+git reset --hard
+
+# go N commits back on current branch
+git reset --hard HEAD~N
+
+# To [i]nteractively remove untracked files, including [d]irectories
+git clean -i -d
+
+# [D]elete a branch
+git branch -D <branch>
+
+# [d]elete a local branch
+git branch -d <branch>
+
+# delete a remote branch
+git push --delete origin <branch>
+
+# make an exisiting branch track a remote branch
+git branch -u upstream/foo
+
+# see who commited which line in a file
+git blame <file>
+
+# view changes between two branches
+git diff <branch> <branch2>
+
+# perform an interactive rebase for the prior N commits
+git rebase -i HEAD~N
+
+# create a bare branch (one that has no commits on it)
+git checkout --orphan branch_name
+
+# checkout a new branch
+git checkout -b <branch>
+
+# undo parts of last commit in a specific file
+git checkout -p HEAD^ -- /path/to/file
+
+# update all submodules
+git submodule update --init --recursive
+
+# Sign a commit
+git commit -a -S -m <message>
