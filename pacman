@@ -30,3 +30,6 @@ pacman -Qo <file>
 
 # get information about a package
 pacman -Si <package>
+
+# additional cheatsheets
+cheat pacman-references  # main references for pacman

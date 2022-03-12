@@ -79,3 +79,7 @@ git submodule update --init --recursive
 
 # Sign a commit
 git commit -a -S -m <message>
+
+# additional cheatsheets
+cheat git-config      # git config subcommand
+cheat git-references  # main references for git
