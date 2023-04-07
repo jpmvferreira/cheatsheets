@@ -1,0 +1,6 @@
+- Advanced Bash-Scripting Guide: Chapter 18. Regular Expressions
+-- main reference
+-- url: https://tldp.org/LDP/abs/html/globbingref.html
+
+- nao eh globbing mas tb tem shell expansions (ver e adicionar):
+-- http://tiswww.case.edu/php/chet/bash/bashref.html#Shell-Expansions

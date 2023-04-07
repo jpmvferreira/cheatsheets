@@ -1,0 +1,24 @@
+# search for a pattern in a file
+grep <pattern> <file>
+
+# case-insensitive search (-i) and show line numbers (-n)
+grep -in <pattern> <file>
+
+# recursively (-R) grep for a pattern in a directory (default = .)
+grep -R <pattern> <dir>
+
+# recursively show all files with line number that have a matching pattern
+grep -nR <pattern> <dir>
+
+# showing only file names instead
+grep -lR <pattern> <dir>
+
+# grep files with specific filename (e.g.: *.csv)
+grep --include "*.csv" -lR <pattern> <dir>
+
+# Set how many lines to show before (-B) and after (-A) pattern:
+grep -B 3 -A 2 <pattern> <file>
+
+# grep with regular expressions:
+grep "^00" <file>                                               # Match lines starting with 00
+grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" <file> # Find IP add

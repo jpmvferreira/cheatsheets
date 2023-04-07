@@ -1,10 +1,14 @@
+---
+syntax: bash
+---
+
 # install a builded package file (.tar.xz)
 pacman -U <file>
 
 # update and upgrade local packages
 pacman -Syu
 
-# list explicitly installed packages:
+# list explicitly installed packages
 pacman -Qe
 
 # list commands provided by an installed package
@@ -30,6 +34,18 @@ pacman -Qo <file>
 
 # get information about a package
 pacman -Si <package>
+
+# check all packages which own a given folder or file
+pacman -Qoq <folder/file>
+
+# rebuild all packages that own /usr/lib/python3.9
+yay -S $(pacman -Qoq /usr/lib/python3.9) --answerclean All
+
+# list package dependencies
+pacman -Si <package>
+
+# list reverse dependencies
+pacman -Sii <package>
 
 # additional cheatsheets
 cheat pacman-references  # main references for pacman

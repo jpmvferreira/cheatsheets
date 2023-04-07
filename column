@@ -1,0 +1,8 @@
+# print content of <file> as a table
+column <file> -t
+
+# do the same but with the output of <command>
+<command> | column -t
+
+# print content of <file> as a table, with a custom separator ","
+column <file> -t -s ","

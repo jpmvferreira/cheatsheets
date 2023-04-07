@@ -17,6 +17,9 @@ git push origin
 # get entire commit history
 git log
 
+# get commit history for a given file or directory
+git log --follow -- <name>
+
 # get current git repository status
 git status
 
@@ -38,11 +41,17 @@ git stash drop <stash>
 # remove staged and working directory changes
 git reset --hard
 
+# remove specific files from the staging area
+git reset HEAD -- /path/to/files
+
 # go N commits back on current branch
 git reset --hard HEAD~N
 
-# To [i]nteractively remove untracked files, including [d]irectories
+# to [i]nteractively remove untracked files, including [d]irectories
 git clean -i -d
+
+# remove changes not staged for commit
+git checkout -- <folder/file>
 
 # [D]elete a branch
 git branch -D <branch>
@@ -72,7 +81,10 @@ git checkout --orphan branch_name
 git checkout -b <branch>
 
 # undo parts of last commit in a specific file
-git checkout -p HEAD^ -- /path/to/file
+git restore <file>
+
+# check all modified (M), deleted (D) and untracked (??) files
+git status -s
 
 # update all submodules
 git submodule update --init --recursive

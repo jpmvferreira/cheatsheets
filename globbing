@@ -1,0 +1,20 @@
+# Quick description:
+# - Bash itself cannot recognize Regular Expressions
+# - Bash carries out filename expansion, a process known as globbing
+
+# list all files which do not start with a . in cwd
+ls *
+
+# list all files starting with a(...)b(...)c in cwd
+ls a*b*c
+
+# list all files a-X.py, where 'X' is an arbitrary single char
+ls a-?.py
+
+# list all files starting with either a or b
+ls [ab]*
+
+# list all files starting with chars between a to c
+ls [a-c]*
+
+# SEVERAMENTE INCOMPLETO, PERCEBER MELHOR E ANOTAR

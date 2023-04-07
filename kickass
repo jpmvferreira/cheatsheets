@@ -1,0 +1,8 @@
+# iterate over all files in data-fqgw/, assign it to a variable $FILE, print its contents to STDOUT, send it to sed
+# The -u switch (unbuffered) is required for those seds (notably, GNU's) that would otherwise read the input in chunks, thereby consuming data that you want to go through sort instead.
+# finds line corresponding to header, prints all contents so far by default, once it reads that line it quites (given by the q in the end)
+# pipes it to a file in data where basename returns only the file name and not the directory
+# a double dash (--) is used in most Bash built-in commands and many other commands to signify the end of command options, after which only positional arguments are accepted.
+for FILE in data-fqgw/*; cat $FILE | (sed -u '/redshift,luminosity_distance,error/'q; sort) > data/$(basename -- $FILE)
+
+# tenho que melhorar isto tudo e por estas cenas fixes num sitio!!!
